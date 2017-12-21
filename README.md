@@ -16,6 +16,13 @@ framework.
 
 - Download [Selenium](http://www.seleniumhq.org/download/).
 - Setup TestNG with your IDE and project ([IntelliJ IDEA setup](https://www.jetbrains.com/help/idea/configuring-testing-libraries.html)/[Eclipse plugin](http://marketplace.eclipse.org/content/testng-eclipse))
+- ChromeDriver (the easiest way is to install it via `npm`)
+
+#### Install ChromeDriver via NPM
+
+Run the following command in your Terminal/CMD/PowerShell:
+
+`npm install chromedriver`
 
 ## Resources
 
