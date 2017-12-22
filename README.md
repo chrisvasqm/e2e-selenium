@@ -20,7 +20,8 @@ framework.
 
 #### Install ChromeDriver via NPM
 
-Run the following command in your `Terminal`, `CMD` or `PowerShell`:
+Download and install [NodeJS](https://nodejs.org/en/download/) to get `npm` commands in your command line tool, and then
+run the following command:
 
 `npm install chromedriver`
 
