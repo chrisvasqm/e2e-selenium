@@ -25,6 +25,10 @@ run the following command:
 
 `npm install chromedriver`
 
+If you are a Mac OS X user with Homebrew installed, you can also use:
+
+`brew install chromedriver`
+
 ## Resources
 
 ### Getting Started Guide
