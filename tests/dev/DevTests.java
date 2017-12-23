@@ -40,7 +40,8 @@ public class DevTests {
     public void searchBar_GetResults() {
         homePage = new DevHomePage(driver);
         homePage.searchFor("test");
-        assertTrue(homePage.getArticles().size() > 0);
+        final boolean hasArticles = homePage.getArticles().size() > 0;
+        assertTrue(hasArticles);
     }
 
     @AfterMethod
