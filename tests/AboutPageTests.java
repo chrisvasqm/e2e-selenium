@@ -24,7 +24,7 @@ public class AboutPageTests {
     }
 
     @Test
-    public void aboutPage_hasCorrectTitle() {
+    public void clickAboutLink_RedirectsToAboutPage() {
         final DevHomePage homePage = new DevHomePage(driver);
         homePage.goToAboutPage();
 
