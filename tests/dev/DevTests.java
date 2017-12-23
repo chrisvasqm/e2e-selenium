@@ -1,3 +1,5 @@
+package dev;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,7 +11,7 @@ import project.page.DevHomePage;
 
 import static org.testng.Assert.assertTrue;
 
-public class AboutPageTests {
+public class DevTests {
     private WebDriver driver;
     private DevHomePage homePage;
     private DevAboutPage aboutPage;
