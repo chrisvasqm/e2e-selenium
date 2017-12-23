@@ -11,6 +11,8 @@ import static org.testng.Assert.assertTrue;
 
 public class AboutPageTests {
     private WebDriver driver;
+    private DevHomePage homePage;
+    private DevAboutPage aboutPage;
 
     @BeforeMethod
     public void setUp() {
@@ -25,10 +27,10 @@ public class AboutPageTests {
 
     @Test
     public void clickAboutLink_RedirectsToAboutPage() {
-        final DevHomePage homePage = new DevHomePage(driver);
+        homePage = new DevHomePage(driver);
         homePage.goToAboutPage();
 
-        final DevAboutPage aboutPage = new DevAboutPage(driver);
+        aboutPage = new DevAboutPage(driver);
         assertTrue(aboutPage.getMainTitle().contains("About dev.to("));
     }
 
