@@ -1,7 +1,6 @@
-package tests;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,8 +14,12 @@ public class AboutPageTests {
 
     @BeforeMethod
     public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        final String OPERATING_SYSTEM = System.getProperty("os.name");
+        if (OPERATING_SYSTEM.contains("win"))
+            driver = new ChromeDriver(new ChromeOptions().addArguments("--start-maximized"));
+        else
+            driver = new ChromeDriver(new ChromeOptions().addArguments("--kiosk"));
+
         driver.get("https://dev.to/");
     }
 
