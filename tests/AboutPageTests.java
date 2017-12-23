@@ -25,10 +25,10 @@ public class AboutPageTests {
 
     @Test
     public void aboutPage_hasCorrectTitle() {
-        DevHomePage homePage = new DevHomePage(driver);
+        final DevHomePage homePage = new DevHomePage(driver);
         homePage.goToAboutPage();
 
-        DevAboutPage aboutPage = new DevAboutPage(driver);
+        final DevAboutPage aboutPage = new DevAboutPage(driver);
         assertTrue(aboutPage.getMainTitle().contains("About dev.to("));
     }
 
