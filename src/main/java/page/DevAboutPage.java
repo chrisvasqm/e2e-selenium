@@ -1,4 +1,4 @@
-package project.page;
+package page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ public class DevAboutPage extends Page {
     @FindBy(xpath = "//h1[contains(text(), 'About dev.to')]")
     private WebElement mainTitle;
 
-    public DevAboutPage(WebDriver driver) {
+    DevAboutPage(WebDriver driver) {
         super(driver);
     }
 

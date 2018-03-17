@@ -1,4 +1,4 @@
-package project.page;
+package page;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +18,7 @@ public class DevHomePage extends Page {
     @FindBy(className = "single-article")
     private List<WebElement> articles;
 
-    public DevHomePage(WebDriver driver) {
+    DevHomePage(WebDriver driver) {
         super(driver);
     }
 
