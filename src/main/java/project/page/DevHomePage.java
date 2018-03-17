@@ -4,12 +4,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import java.util.List;
 
-public class DevHomePage {
+public class DevHomePage extends Page {
 
     @FindBy(xpath = "//*[@id=\"sidebar-wrapper-left\"]/div[2]/div[2]/div[2]/a[1]")
     private WebElement linkAbout;
@@ -21,7 +19,7 @@ public class DevHomePage {
     private List<WebElement> articles;
 
     public DevHomePage(WebDriver driver) {
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 5), this);
+        super(driver);
     }
 
     public void goToAboutPage() {
