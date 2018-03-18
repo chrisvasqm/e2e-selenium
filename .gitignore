@@ -1,4 +1,2 @@
-# Created by .ignore support plugin (hsz.mobi)
 .idea/
-demo-e2e-selenium.iml
-out/
+*iml
