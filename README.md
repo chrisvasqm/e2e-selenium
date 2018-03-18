@@ -3,21 +3,12 @@
 This is a **demo** project to showcase how to perform End-To-End testing using the `Selenium` 
 framework.
 
-## Requirements
+## Prerequisites
 
-### IDEs
-
-- [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/#section=windows) (recommended)
-- [Eclipse](http://www.eclipse.org/downloads/)
-
-### Dependencies
-
-- Download [Selenium](http://www.seleniumhq.org/download/).
-- Setup TestNG with your IDE and project ([IntelliJ IDEA setup](https://www.jetbrains.com/help/idea/configuring-testing-libraries.html)
-/ [Eclipse plugin](http://marketplace.eclipse.org/content/testng-eclipse))
+- Google Chrome browser.
 - ChromeDriver (the easiest way to install it is via `npm`)
 
-#### Install ChromeDriver via NPM
+### Install ChromeDriver via NPM
 
 Download and install [NodeJS](https://nodejs.org/en/download/) to get `npm` commands in your command line tool, and then
 run the following command:
