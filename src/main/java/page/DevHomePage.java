@@ -8,8 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class DevHomePage extends Page {
+    private final WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"sidebar-wrapper-left\"]/div[2]/div[2]/div[2]/a[1]")
+    @FindBy(xpath = "(//a[text() = 'About'])[1]")
     private WebElement linkAbout;
 
     @FindBy(id = "nav-search")
@@ -20,6 +21,11 @@ public class DevHomePage extends Page {
 
     DevHomePage(WebDriver driver) {
         super(driver);
+        this.driver = driver;
+    }
+
+    public void open() {
+        driver.get("https://dev.to/");
     }
 
     public void goToAboutPage() {
@@ -30,7 +36,7 @@ public class DevHomePage extends Page {
         searchBox.sendKeys(query, Keys.ENTER);
     }
 
-    public List<WebElement> getArticles() {
-        return articles;
+    public boolean hasArticles() {
+        return articles.size() > 0;
     }
 }

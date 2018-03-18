@@ -2,7 +2,6 @@ package page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,35 +15,27 @@ public class DevTests {
 
     @BeforeMethod
     public void setUp() {
-        final String OPERATING_SYSTEM = System.getProperty("os.name");
-        if (OPERATING_SYSTEM.contains("win"))
-            driver = new ChromeDriver(new ChromeOptions().addArguments("--start-maximized"));
-        else
-            driver = new ChromeDriver(new ChromeOptions().addArguments("--kiosk"));
+        driver = new ChromeDriver();
+        homePage = new DevHomePage(driver);
+        aboutPage = new DevAboutPage(driver);
 
-        driver.get("https://dev.to/");
+        homePage.open();
     }
 
     @Test
     public void clickAboutLink_RedirectsToAboutPage() {
-        homePage = new DevHomePage(driver);
         homePage.goToAboutPage();
-
-        aboutPage = new DevAboutPage(driver);
-        assertTrue(aboutPage.getMainTitle().contains("About dev.to("));
+        assertTrue(aboutPage.isAtAboutPage());
     }
 
     @Test
     public void searchBar_GetResults() {
-        homePage = new DevHomePage(driver);
         homePage.searchFor("test");
-        final boolean hasArticles = homePage.getArticles().size() > 0;
-        assertTrue(hasArticles);
+        assertTrue(homePage.hasArticles());
     }
 
     @AfterMethod
     public void tearDown() {
         driver.quit();
     }
-
 }

@@ -7,14 +7,13 @@ import org.openqa.selenium.support.FindBy;
 public class DevAboutPage extends Page {
 
     @FindBy(xpath = "//h1[contains(text(), 'About dev.to')]")
-    private WebElement mainTitle;
+    private WebElement mainHeader;
 
     DevAboutPage(WebDriver driver) {
         super(driver);
     }
 
-    public String getMainTitle() {
-        return mainTitle.getText();
+    public boolean isAtAboutPage() {
+        return mainHeader.getText().contains("About dev.to(");
     }
-
 }
