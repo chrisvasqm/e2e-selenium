@@ -23,13 +23,13 @@ public class DevTests {
     }
 
     @Test
-    public void clickAboutLink_RedirectsToAboutPage() {
+    public void goToAboutPage_ClickAboutLinkFromHomePage_RedirectsUserToAboutPage() {
         homePage.goToAboutPage();
         assertTrue(aboutPage.isAtAboutPage());
     }
 
     @Test
-    public void searchBar_GetResults() {
+    public void searchFor_QueryingForTest_ReturnsAllPostsRelatedToTest() {
         homePage.searchFor("test");
         assertTrue(homePage.hasArticles());
     }
