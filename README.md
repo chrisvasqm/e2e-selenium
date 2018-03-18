@@ -1,7 +1,5 @@
 # End-to-end testing with Selenium
 
-![Selenium logo](https://upload.wikimedia.org/wikipedia/en/5/5c/Seleniumlogo.png)
-
 This is a **demo** project to showcase how to perform End-To-End testing using the `Selenium` 
 framework.
 
