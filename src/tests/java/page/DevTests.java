@@ -25,12 +25,14 @@ public class DevTests {
     @Test
     public void goToAboutPage_ClickAboutLinkFromHomePage_RedirectsUserToAboutPage() {
         homePage.goToAboutPage();
-        assertTrue(aboutPage.isAtAboutPage());
+
+        assertTrue(aboutPage.isVisible());
     }
 
     @Test
     public void searchFor_QueryingForTest_ReturnsAllPostsRelatedToTest() {
         homePage.searchFor("test");
+
         assertTrue(homePage.hasArticles());
     }
 

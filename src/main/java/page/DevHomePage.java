@@ -4,6 +4,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -18,10 +20,12 @@ public class DevHomePage extends Page {
 
     @FindBy(className = "single-article")
     private List<WebElement> articles;
+    private WebDriverWait wait;
 
     DevHomePage(WebDriver driver) {
         super(driver);
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, 5);
     }
 
     public void open() {
@@ -34,9 +38,10 @@ public class DevHomePage extends Page {
 
     public void searchFor(String query) {
         searchBox.sendKeys(query, Keys.ENTER);
+        wait.until(ExpectedConditions.urlContains("search"));
     }
 
     public boolean hasArticles() {
-        return articles.size() > 0;
+        return !articles.isEmpty();
     }
 }

@@ -13,7 +13,7 @@ public class DevAboutPage extends Page {
         super(driver);
     }
 
-    public boolean isAtAboutPage() {
-        return mainHeader.getText().contains("About dev.to(");
+    public boolean isVisible() {
+        return mainHeader.isDisplayed();
     }
 }
