@@ -18,8 +18,9 @@ public class DevHomePage extends Page {
     @FindBy(id = "nav-search")
     private WebElement searchBox;
 
-    @FindBy(className = "single-article")
+    @FindBy(className = "crayons-story")
     private List<WebElement> articles;
+
     private WebDriverWait wait;
 
     DevHomePage(WebDriver driver) {
