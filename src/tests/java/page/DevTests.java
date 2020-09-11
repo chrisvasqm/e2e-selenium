@@ -16,6 +16,7 @@ public class DevTests {
     @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         homePage = new DevHomePage(driver);
         aboutPage = new DevAboutPage(driver);
 
