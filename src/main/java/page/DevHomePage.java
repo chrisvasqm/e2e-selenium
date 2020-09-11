@@ -21,7 +21,7 @@ public class DevHomePage extends Page {
     @FindBy(className = "crayons-story")
     private List<WebElement> articles;
 
-    private WebDriverWait wait;
+    private final WebDriverWait wait;
 
     DevHomePage(WebDriver driver) {
         super(driver);
