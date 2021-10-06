@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class DevHomePage extends Page {
-    private final WebDriver driver;
 
     @FindBy(xpath = "(//a[text() = 'About'])[1]")
     private WebElement linkAbout;
@@ -25,7 +24,6 @@ public class DevHomePage extends Page {
 
     DevHomePage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         this.wait = new WebDriverWait(driver, 5);
     }
 
